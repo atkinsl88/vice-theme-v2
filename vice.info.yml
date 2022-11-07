@@ -1,0 +1,20 @@
+name: Vice v2
+type: theme
+base theme: stable
+description: 'Vice v2 theme for Drupal'
+package: Custom
+core_version_requirement: ^8 || ^9
+
+# Libraries
+libraries:
+  - vice/main
+
+# Region metadata.
+regions:
+  pre_navigation: 'Pre navigation'
+  navigation: 'Primary navigation'
+  hero: 'Hero banner'
+  subscribe: 'Subscribe'
+  sidebar: 'Sidebar'
+  content: Content
+  footer: 'Footer'

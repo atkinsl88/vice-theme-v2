@@ -1,0 +1,32 @@
+{#
+/**
+    Default theme implementation to display a single page.
+    The doctype, html, head and body tags are not in this template. Instead they can be found in the html.html.twig template in this directory.
+ */
+#}
+
+<div class="layout-container">
+
+  {{ page.pre_navigation }}
+  {{ page.navigation }}
+
+  <header role="banner">
+    {{ page.hero }}
+  </header>
+
+  <main class="frontpage-content container" role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+  </main>
+
+  <section class="subscribe">
+    {{ page.subscribe }}
+  </section>
+
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+
+</div>{# /.layout-container #}

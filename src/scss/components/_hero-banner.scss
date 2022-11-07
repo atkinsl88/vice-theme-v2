@@ -1,0 +1,16 @@
+@include media-breakpoint-up (xs) {
+  .hero-banner {
+    #block-pagetitle {
+      background-color: $primary-color;
+      padding: 3rem 0;
+      h1 {
+        color: $secondary-color;
+        font-size: $mob-font-size-h1;
+        line-height: $mob-font-size-h1 * 1;
+        padding: 0 2rem;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

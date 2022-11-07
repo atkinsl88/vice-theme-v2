@@ -1,0 +1,15 @@
+@include media-breakpoint-up (xs) {
+  .main-content {
+    display: flex;
+    .layout-content {
+      width: 73%;
+      background-color: $primary-color;
+      border-top: 1px solid #E8E8E8;
+    }
+    .layout-sidebar-first {
+      width: 27%;
+      background-color: $primary-color;
+      border-left: 1px solid #E8E8E8;
+    }
+  }
+}

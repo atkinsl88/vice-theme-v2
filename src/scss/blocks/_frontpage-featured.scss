@@ -1,0 +1,14 @@
+@include media-breakpoint-up (xs) {
+  .frontpage-featured {
+    .views-view-grid, .horizontal {
+      .views-row {
+        .views-col {
+          img {
+            @extend %image;
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+}

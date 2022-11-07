@@ -1,0 +1,18 @@
+{% extends "block.html.twig" %}
+
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+
+{% block content %}
+  {% if content %}
+
+    <section class="frontpage-featured">
+      {{ content }}
+    </section>
+
+  {% endif %}
+{% endblock %}

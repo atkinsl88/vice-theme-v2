@@ -1,0 +1,36 @@
+@include media-breakpoint-up (xs) {
+  .subscribe {
+    background-color: $secondary-color;
+    &--form {
+      display: flex;
+      padding: 1rem 3rem 1rem 2rem;
+      input[type=text] {
+        min-width: 600px;
+        padding: 1rem;
+        background-color: #717171;
+        border: 1px solid #717171;
+        border-radius: 5px;
+      }
+      input::placeholder {
+        color: #f9f9f9;
+      }
+      input[type=submit] {
+        margin-left: 1rem;
+        padding: 1rem 2rem;
+      }
+    }
+    h2 {
+      font-size: $mob-font-size-h1;
+      padding: 3rem 2rem 0.5rem 2rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+    p {
+      padding: 0.5rem 2rem 3rem 2rem;
+      margin-bottom: 0;
+      color: #717171;
+      font-size: 0.75rem;
+    }
+  }
+}
