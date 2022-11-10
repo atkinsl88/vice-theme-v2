@@ -1,0 +1,14 @@
+@include media-breakpoint-up (xs) {
+  .promotion--section {
+    background-color: $secondary-color;
+    padding: 4rem 0;
+    margin: 2rem 0;
+    text-align: center;
+    .content {
+      max-width: 75ch;
+      h2, p {
+        color: $primary-color;
+      }
+    }
+  }
+}

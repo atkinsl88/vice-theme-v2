@@ -1,0 +1,17 @@
+@include media-breakpoint-up (xs) {
+  article {
+    .article-author {
+      padding: 2rem 2rem 0 2rem;
+    }
+    .article-content {
+      padding: 1rem 2rem 2rem 2rem;
+      max-width: 90ch;
+      img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

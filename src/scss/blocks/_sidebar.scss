@@ -1,0 +1,9 @@
+@include media-breakpoint-up (xs) {
+ .sidebar {
+  .views-field-title {
+    a {
+      font-size: 0.75rem;
+    }
+  }
+ } 
+}

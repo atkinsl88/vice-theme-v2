@@ -3,3 +3,12 @@ main:
   css:
     theme:
       dist/main.css: {}
+
+navigation:
+  js:
+    src/js/navigation.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

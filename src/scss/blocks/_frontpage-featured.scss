@@ -5,7 +5,7 @@
         .views-col {
           img {
             @extend %image;
-            height: 500px;
+            max-height: 300px;
           }
         }
       }

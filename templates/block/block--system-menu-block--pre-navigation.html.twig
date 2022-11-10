@@ -5,7 +5,7 @@
 #}
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav class="pre-navigation container"  role="pre-navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
+<nav class="pre-navigation--content container"  role="pre-navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}

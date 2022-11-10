@@ -1,0 +1,80 @@
+
+@include media-breakpoint-up (xs) {
+  .navigation-burger {
+    display: flex;
+    align-items: center;
+    .burger {
+      margin: 1.5rem 0.75rem 1.5rem 1.5rem;
+      .line {
+        width: 60px;
+        height: 2px;
+        background-color: #ffffff;
+        margin: 6px 0;
+      }
+      &:hover {
+        .line {
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+  .modal {
+    .navigation-title {
+      p {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+      }
+    }
+    .navigation-burger {
+      z-index: 2;
+      .burger {
+        .line {
+          background-color: #fff;
+        }
+      }
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .mystyle {
+    display: none;
+    &-active {
+      display: block;
+      background-color: $secondary-color;
+      z-index: 1;
+      position: absolute;
+      left: auto;
+      right: auto;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    .menu-links {
+      h3 {
+        font-size: 2rem;
+        color: #fff;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

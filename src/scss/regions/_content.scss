@@ -2,14 +2,15 @@
   .main-content {
     display: flex;
     .layout-content {
-      width: 73%;
+      width: 70%;
       background-color: $primary-color;
       border-top: 1px solid #E8E8E8;
     }
-    .layout-sidebar-first {
-      width: 27%;
+    .layout-sidebar {
+      width: 30%;
       background-color: $primary-color;
       border-left: 1px solid #E8E8E8;
+      padding: 2rem 0 2rem 2rem;
     }
   }
 }

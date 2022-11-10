@@ -8,12 +8,14 @@ core_version_requirement: ^8 || ^9
 # Libraries
 libraries:
   - vice/main
+  - vice/navigation
 
 # Region metadata.
 regions:
   pre_navigation: 'Pre navigation'
   navigation: 'Primary navigation'
   hero: 'Hero banner'
+  promotion: 'Promotion'
   subscribe: 'Subscribe'
   sidebar: 'Sidebar'
   content: Content
