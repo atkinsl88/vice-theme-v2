@@ -15,11 +15,12 @@
   </header>
 
   <main class="main-content container" role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>  
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
-    <aside class="layout-sidebar" role="complementary">
+    </div>
+  
+    <aside class="layout-sidebar">
       {{ page.sidebar }}
     </aside>
   </main>
@@ -28,8 +29,8 @@
     {{ page.subscribe }}
   </section>
 
-  <footer role="contentinfo">
+  <footer role="footer">
     {{ page.footer }}
   </footer>
 
-</div>{# /.layout-container #}
+</div>

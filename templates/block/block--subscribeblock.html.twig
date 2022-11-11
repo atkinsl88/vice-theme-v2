@@ -1,14 +1,42 @@
-{#
-/**
-    xxx
- */
+{# 
+  Used for the Subscribe block.
 #}
 
-<div class="subscribe container">
+{# Set footer classes #}
+{% set subscribe_attribute = create_attribute() %}
+
+{# Set footer classes array #}
+{%
+  set subscribe_classes = [
+    'subscribe',
+    'container',
+    'subscribe-form',
+  ]
+%}
+
+{# Remove classes from array #}
+{% set remove_classes = ['subscribe-form'] %}
+
+<div
+  {# Use nav classes array #}
+  {{ subscribe_attribute.addClass(subscribe_classes).removeClass(remove_classes) }}
+>
+
   <h2>Subscribe to the Vice newsletter</h2>
-  <form class="subscribe--form" action="/action_page.php">
+
+  {# Add classes to array #}
+  {% set add_classes = ['subscribe-form'] %}
+  {# Remove classes from array #}
+  {% set remove_classes = ['subscribe', 'container'] %}
+
+  <form 
+    {{ subscribe_attribute.addClass(add_classes).removeClass(remove_classes) }} 
+    action="/action_page.php"
+  >
     <input type="text" placeholder="Your email">
     <input type="submit" value="Subscribe">
   </form>
+
   <p>By signing up to the VICE newsletter you agree to receive electronic communications from VICE that may sometimes include advertisements or sponsored content.</p>
+
 </div>

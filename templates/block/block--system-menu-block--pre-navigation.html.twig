@@ -1,21 +1,33 @@
-{#
-/**
-    The 'Parent' template for the pre-navigation menu.
- */
+{# 
+  Used for the Pre-Navigation menu navigation links.
 #}
 
+{# Use the heading_id as the aria-labelledby #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav class="pre-navigation--content container"  role="pre-navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  {{ title_suffix }}
 
-  {# Menu. #}
+{# Set nav classes #}
+{% set prenav_attribute = create_attribute() %}
+
+{# Set nav classes array #}
+{%
+  set prenav_classes = [
+    'pre-navigation-content',
+    'container',
+  ]
+%}
+
+<nav
+  {# Use nav classes array #}
+  {{ prenav_attribute.addClass(prenav_classes) }}
+  {# Role #}
+  role="navigation" 
+  {# Set aria-labelledby #}
+  aria-labelledby="{{ heading_id }}"
+>
+
+  {# Pre navigation menu items #}
   {% block content %}
     {{ content }}
   {% endblock %}
+
 </nav>

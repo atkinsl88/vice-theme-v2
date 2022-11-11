@@ -1,0 +1,20 @@
+vice.mobile:
+  label: narrow
+  mediaQuery: '(max-width: 768px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+vice.tablet:
+  label: wide
+  mediaQuery: '(max-width: 992px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+vice.desktop:
+  label: wide
+  mediaQuery: '(max-width: 1400px)'
+  weight: 0
+  multipliers:
+    - 1x

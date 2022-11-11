@@ -1,5 +1,5 @@
 (function ($, window, Drupal) {
-  Drupal.behaviors.exampleTheme = {
+  Drupal.behaviors.navigation = {
     attach: function (context, settings) {
       $( "#burgerMenu", context ).click(function() {
         $('#myDIV').toggleClass("mystyle-active");

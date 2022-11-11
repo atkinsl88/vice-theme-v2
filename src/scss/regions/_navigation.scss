@@ -1,37 +1,20 @@
 @include media-breakpoint-up (xs) {
-  .pre-navigation {
-    background-color: $secondary-color;
-    &--content {
-      display: flex;
-      justify-content: flex-end;
-      border-bottom: 0.5px solid $border-color;
-      padding: 0;
-      ul {
-        margin: 1rem 0;
-        li {
-          list-style: none;
-          a {
-            color: #eeeeee;
-            font-family: 'Source Code Pro', monospace;
-            font-size: $mob-font-size-sm;
-            text-transform: uppercase;
-            letter-spacing: 0px;
-          }
-        }
-      }
-      a {
-        color: $primary-color;
-      }
-    }
-  }
   .navigation {
     background-color: $secondary-color;
-    &--content {
+    .navigation-content {
       padding: 1rem 0;
       display: flex;
       align-items: center;
+      min-height: 80px;
+      a {
+        margin-bottom: 0;
+        img {
+          margin: 0 1rem;
+        }
+      }
       ul {
         display: flex;
+        margin-left: 0;
         li {
           list-style: none;
           a {
@@ -40,14 +23,14 @@
         }
       }
     }
-    &--burger {
+    .navigation-burger {
       display: flex;
       align-items: center;
       margin-right: 1rem;
-      .burger {
-        a {
-          margin-bottom: 0;
-        }
+      a {
+        margin-bottom: 0;
+      }
+      .burger-menu {
         .line {
           width: 60px;
           height: 2px;

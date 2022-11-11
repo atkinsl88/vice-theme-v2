@@ -1,0 +1,30 @@
+{#
+/**
+    xxx
+ */
+#}
+
+{# Additional hidden modal #}
+<div id="myDIV" class="modal mystyle">
+  <div class="container">
+    <div class="navigation-wrapper">
+      <div class="navigation-burger">
+        {# Primary navigation burger #}
+        <div{{ attributes.setAttribute('class', 'burger').setAttribute('id', 'burgerMenuClose') }}>
+          <div{{ attributes.setAttribute('class', 'line') }}></div>
+          <div{{ attributes.setAttribute('class', 'line') }}></div>
+        </div>
+      </div>
+      {# Primary navigation logo #}
+      <a href="/"><img src="{{ directory ~ '/vice_logo.png' }}" /></a>
+    </div>
+    {# Footer menu links #}
+    <div class="menu">
+      <div class="menu-links">
+        <a href="/environment"><h3>Environment</h3></a>
+        <a href="/music"><h3>Music</h3></a>
+        <a href="/world-news"><h3>World News</h3></a>
+      </div>
+    </div>
+  </div>
+</div>

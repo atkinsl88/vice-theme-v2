@@ -1,47 +1,36 @@
-{#
-/**
-    The 'Parent' template for the main menu.
- */
+{# 
+  Used for the Footer Menu menu navigation links.
 #}
 
+{# Use the heading_id as the aria-labelledby #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav class="footer container" role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  {{ title_suffix }}
 
-  {# Menu. #}
+{# Set footer classes #}
+{% set footer_attribute = create_attribute() %}
+
+{# Set footer classes array #}
+{%
+  set footer_classes = [
+    'footer-content',
+    'container',
+  ]
+%}
+
+<nav
+  {# Use nav classes array #}
+  {{ footer_attribute.addClass(footer_classes) }}
+  {# Role #}
+  role="footer" 
+  {# Set aria-labelledby #}
+  aria-labelledby="{{ heading_id }}"
+>
+  
+  {# Footer navigation menu items. #}
   {% block content %}
     {{ content }}
   {% endblock %}
 
-  <p>© 2022 VICE MEDIA GROUP</p>
-
-  <div id="myDIV" class="modal mystyle container">
-
-    <div class="navigation-burger">
-      <div class="burger" id="burgerMenuClose">
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <div class="title">
-        <p>Menu</p>
-      </div>
-    </div>
-
-    <a href="/"><img src="{{ directory ~ '/vice_logo.png' }}" /></a>
-
-    <div class="menu">
-      <div class="menu-links">
-        <a href="/environment"><h3>Environment</h3></a>
-        <a href="/music"><h3>Music</h3></a>
-        <a href="/world-news"><h3>World News</h3></a>
-      </div>
-    </div>
-  </div>
+  {# Copyright #}
+  <p>©<span id="copyright-year"></span> Vice</p>
 
 </nav>

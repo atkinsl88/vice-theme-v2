@@ -9,6 +9,7 @@ core_version_requirement: ^8 || ^9
 libraries:
   - vice/main
   - vice/navigation
+  - vice/copyright
 
 # Region metadata.
 regions:
@@ -18,5 +19,5 @@ regions:
   promotion: 'Promotion'
   subscribe: 'Subscribe'
   sidebar: 'Sidebar'
-  content: Content
+  content: 'Content'
   footer: 'Footer'

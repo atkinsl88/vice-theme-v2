@@ -12,3 +12,12 @@ navigation:
     - core/jquery
     - core/jquery.once
     - core/drupalSettings
+
+copyright:
+  js:
+    src/js/copyright.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

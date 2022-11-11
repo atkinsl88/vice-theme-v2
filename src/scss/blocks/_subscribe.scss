@@ -1,7 +1,7 @@
 @include media-breakpoint-up (xs) {
   .subscribe {
     background-color: $secondary-color;
-    &--form {
+    .subscribe-form {
       display: flex;
       padding: 1rem 3rem 1rem 2rem;
       input[type=text] {

@@ -1,24 +1,32 @@
-
 @include media-breakpoint-up (xs) {
-  .navigation-burger {
+  .navigation-wrapper {
     display: flex;
     align-items: center;
-    .burger {
-      margin: 1.5rem 0.75rem 1.5rem 1.5rem;
+    height: 100px;
+    margin-top: 3.5rem;
+    img {
+      margin: 0 1rem;
+    }
+  }
+}
+
+
+@include media-breakpoint-up (xs) {
+  .burger {
+    .line {
+      width: 60px;
+      height: 2px;
+      background-color: #ffffff;
+      margin: 6px 0;
+    }
+    &:hover {
       .line {
-        width: 60px;
-        height: 2px;
-        background-color: #ffffff;
-        margin: 6px 0;
-      }
-      &:hover {
-        .line {
-          margin: 3px 0;
-        }
+        margin: 3px 0;
       }
     }
   }
   .modal {
+    height: 100vh;
     .navigation-title {
       p {
         color: #fff;
@@ -48,20 +56,18 @@
       display: block;
       background-color: $secondary-color;
       z-index: 1;
-      position: absolute;
-      left: auto;
-      right: auto;
+      position: fixed;
+      left: 0;
+      right: 0;
       top: 0;
       height: 100%;
       width: 100%;
       overflow-x: hidden;
     }
   }
-  
   .menu {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: space-evenly;
     .menu-links {
       h3 {
